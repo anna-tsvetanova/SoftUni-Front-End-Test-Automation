@@ -1,1 +1,5 @@
+Calculation
 
+§ Test the calculation functionality for each operation (addition, subtraction, multiplication, division) with valid inputs.
+
+§ Assert the correctness of the result displayed for each operation.
