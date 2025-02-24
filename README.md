@@ -16,3 +16,5 @@ Course Scope
  ▪Appium Desktop
  ▪Appium Mobile
  ▪Test Automation Architecture
+
+ 
