@@ -1,9 +1,0 @@
-Input Validation
-
-§ Ensure that the input fields for "First Number" and "Second Number" accept only numerical values.
-
-§ Verify that appropriate error messages are displayed when non-numeric values are entered.
-
-§ Check the application's behavior with missing input values (e.g., only one number entered).
-
-§ Test the application's behavior with both input fields left empty.
