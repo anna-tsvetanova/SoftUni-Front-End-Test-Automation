@@ -1,1 +1,13 @@
+Edge Cases
 
+§ Test the application with edge cases:
+
+§ Dividing by zero (you will find a bug here; the correct text should read: Invalid Calculation but it's not)
+
+§ Test the application's response to negative numbers.
+
+§ Verify the application's handling of decimal numbers.
+
+§ Check if leading and trailing spaces in input fields are managed correctly.
+
+§ Try calculating with "Infinity".
