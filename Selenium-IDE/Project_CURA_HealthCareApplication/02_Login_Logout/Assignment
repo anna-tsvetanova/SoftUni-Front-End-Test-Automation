@@ -18,6 +18,19 @@ Check the reference section for each command to see the explanation for what it 
 
     o Password
 
-▪ 
-▪ 
-▪ 
+▪ Log in with the correct details:
+
+    o Username: John Doe
+
+    o Password: ThisIsNotAPassword
+
+▪ After logging in, verify that you are taken to a different page. You can choose any element on that page to check.
+
+▪ Log out by clicking on the menu and selecting logout.
+
+▪ After logging out, ensure you are redirected to the home page.
+
+▪ Click the "Make Appointment" button again and confirm that it takes you to the login page.
+
+OPTIONAL: Try using developer tools to copy text for text assertions directly from there. This will help you get used to using developer tools.
+
