@@ -1,10 +1,23 @@
-# SoftUni-QA-Fundamentals-and-Manual-Testing 
+Successfully log in and log out of the website.
+Use commands that don't stop the script if a step fails.
+Write the test manually. Don't use the record option.
 
-The course covers various aspects of the Quality  Assurance at a fundamental level and across a wide  spectrum of topics:
+Check the reference section for each command to see the explanation for what it does.
 
-▪ Software Development Lifecycle and Methodologies  
-▪ Test Management  
-▪ Test Techniques  
-▪ Web API and Postman  
-▪ Relational Databases  
-▪ Test Monitoring and Control
+▪ On the home page, check that the "Make Appointment" button is visible and that its text is correct.
+
+▪ Go to the login page by clicking the "Make Appointment" button.
+
+▪ On the login page, check these elements:
+
+    o Login
+
+    o Please login to make appointment
+
+    o Username
+
+    o Password
+
+▪ 
+▪ 
+▪ 
