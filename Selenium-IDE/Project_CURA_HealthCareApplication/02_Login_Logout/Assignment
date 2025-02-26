@@ -30,7 +30,5 @@ Check the reference section for each command to see the explanation for what it 
 
 ▪ After logging out, ensure you are redirected to the home page.
 
-▪ Click the "Make Appointment" button again and confirm that it takes you to the login page.
-
 OPTIONAL: Try using developer tools to copy text for text assertions directly from there. This will help you get used to using developer tools.
 
