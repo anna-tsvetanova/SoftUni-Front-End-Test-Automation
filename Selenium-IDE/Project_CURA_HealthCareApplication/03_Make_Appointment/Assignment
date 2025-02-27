@@ -1,1 +1,41 @@
+Use commands that will not stop the script, if a given step fails.
+Write script manually. Without using record option.
+Use dev tools.
 
+▪ Click on the button "Make Appointment".
+
+▪ Log in.
+
+▪ Verify that the title "Make Appointment" is displayed.
+
+▪ In the Facility field, select "Hongkong CURA Healthcare Center".
+
+▪ In "Healthcare program" select value None.
+
+▪ Enter a date. (Type the date. Don't use the select option from the calendar. Trust me, it's easier.)
+
+▪ Enter any value in the "Comment" field.
+
+▪ Press the button "Book appointment".
+
+▪ First, verify that you are on the meeting confirmation page. Use title "Appointment Confirmation".
+
+▪ On the meeting confirmation page, verify that the values you previously selected are displayed there.
+
+▪ Verify one by one:
+
+▪ Does Facility have the selected value "Hongkong Cura Healthcare Center".
+
+▪ Does "Apply for hospital readmission" have value "No".
+
+▪ Is the Healthcare program set to "None".
+
+▪ Is the date you selected the same.
+
+▪ Is the comment you entered the same.
+
+▪ Press the "Go to homepage" button.
+
+▪ Verify that you have been correctly redirected to the home page.
+
+▪ Log out.
