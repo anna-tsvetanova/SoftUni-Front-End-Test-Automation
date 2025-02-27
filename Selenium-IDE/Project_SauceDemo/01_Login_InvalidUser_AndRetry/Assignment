@@ -1,1 +1,41 @@
+Create a test script that attempts to log in with an invalid username, checks the error message, and then retries with a valid username. 
+Use conditional logic to handle the error scenario.
 
+
+Login Attempt with Invalid User:
+
+▪ Locate the username field and enter user123.
+
+▪ Locate the password field and enter secret_sauce.
+
+▪ Click on the login button.
+
+
+Verify Error Message:
+
+▪ Assert that the error message displayed is: "Epic sadface: Username and password do not match any user in this service".
+
+
+Conditional Retry:
+
+▪ Hint: Use store text and if structure for this part.
+
+▪ Use the if command to check if the error message is present.
+
+▪ If the error message is found, print "Wrong username" and retry with valid credentials.
+
+
+Login Attempt with Valid User:
+
+▪ Locate the username field and enter standard_user.
+
+▪ Locate the password field and enter secret_sauce.
+
+▪ Click on the login button.
+
+
+Verify Successful Login:
+
+▪ Assert that the page title is "Products".
+
+▪ Print "Successful login".
