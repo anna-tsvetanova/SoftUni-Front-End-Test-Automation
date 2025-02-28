@@ -1,1 +1,3 @@
+Remove item from the shopping cart
 
+Create a test script that logs into the application, adds an item to the cart, verifies the cart content, and then removes the item from the cart.
