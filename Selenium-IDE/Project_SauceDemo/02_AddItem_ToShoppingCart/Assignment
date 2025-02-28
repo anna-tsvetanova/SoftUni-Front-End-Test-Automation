@@ -1,1 +1,5 @@
+Add item to the shopping cart
+
+Create a test script that logs into the application, adds an item to the cart, and verifies the cart content.
+
 
