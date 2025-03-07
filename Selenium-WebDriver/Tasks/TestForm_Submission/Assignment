@@ -1,20 +1,20 @@
 Test Form Submission  
 Write a Test that does the following: 
 
-Asserts the "Contact Form" title. 
+▪ Asserts the "Contact Form" title. 
 
-Selects the male radio button and asserts its selection. 
+▪ Selects the male radio button and asserts its selection. 
 
-Enters "Butch" as the first name and asserts the entered value. 
+▪ Enters "Butch" as the first name and asserts the entered value. 
 
-Enters "Coolidge" as the last name and asserts the entered value. 
+▪ Enters "Coolidge" as the last name and asserts the entered value. 
 
-Asserts the presence of the "Additional Information" section. 
+▪ Asserts the presence of the "Additional Information" section. 
 
-Enters "0888999777" as the phone number and asserts the entered value. 
+▪ Enters "0888999777" as the phone number and asserts the entered value. 
 
-Selects the newsletter checkbox and asserts its selection. 
+▪ Selects the newsletter checkbox and asserts its selection. 
 
-Clicks the submit button. 
+▪ Clicks the submit button. 
 
-Asserts the "Thank You!" message on the next page. 
+▪ Asserts the "Thank You!" message on the next page. 
