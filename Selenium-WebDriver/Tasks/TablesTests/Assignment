@@ -1,1 +1,81 @@
+ 
 
+ 
+
+ 
+
+Working with Web Tables 
+
+Many web pages need to show data in a clear, organized way. Usually, a web table element is used for this. 
+A web table is an HTML element represented by the <table> tag. It contains other HTML elements, making it a container HTML element. Here is what 
+a <table> tag can include: 
+
+The table created using the preceding elements will be displayed in the browser as a web table: 
+
+The scenario we will use to work with a web table is again from the http://practice.bpbonline.com/ application. 
+The home page of this website shows a list of products. In the background, this list is actually a web table.  
+
+On the home page products are listed as follows: 
+
+ We can see the <table> tag, which includes a <tbody>. Inside, there are three <tr> tags representing table rows. 
+Each row contains three <td> tags representing columns. The <td> tags include two anchor elements for the product image and product page, 
+as well as text displaying the product's price. 
+
+ 
+
+ 
+By the end of this exercise, you will be able to: 
+
+Traverse a web table and extract information. 
+
+Save the extracted information to a CSV file. 
+
+ 
+
+Open the application using the URL: http://practice.bpbonline.com/. Use either driver.Url or driver.Navigate().GoToUrl() to navigate to the URL. 
+
+Identify the web table on the home page. Use XPath to locate the web table on the home page. 
+
+ 
+
+ 
+
+Find all rows in the web table: 
+
+ 
+
+Create a CSV file to save product information: 
+
+ 
+
+ 
+
+This optional step ensures that if a CSV file with the same name already exists in the specified location, it will be deleted before creating a new one. 
+This prevents appending data to an old file and ensures that each test run generates a fresh CSV file with only the current data. 
+
+ 
+Traverse through table rows to find the table columns: 
+
+Loop through each row and then each column within the row. 
+
+Extract the text from each cell, split the text to separate product name and cost, and format it. 
+
+Append the formatted text to the CSV file. 
+
+ 
+
+ 
+
+Use assertions to check that the CSV file was created and is not empty. 
+
+ 
+
+ 
+
+Check how the file looks like in the bin à Debug à net{version} directory 
+
+ 
+
+ 
+
+Note: Keep in mind that the products might be slightly different, as they change each month. 
