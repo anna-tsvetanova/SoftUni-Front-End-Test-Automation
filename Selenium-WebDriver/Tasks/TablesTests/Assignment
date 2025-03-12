@@ -15,10 +15,7 @@ On the home page products are listed as follows:
 Each row contains three <td> tags representing columns. The <td> tags include two anchor elements for the product image and product page, 
 as well as text displaying the product's price. 
 
- 
-
- 
-By the end of this exercise, you will be able to: 
+▪ By the end of this exercise, you will be able to: 
 
 Traverse a web table and extract information. 
 
@@ -26,29 +23,19 @@ Save the extracted information to a CSV file.
 
  
 
-Open the application using the URL: http://practice.bpbonline.com/. Use either driver.Url or driver.Navigate().GoToUrl() to navigate to the URL. 
+▪ Open the application using the URL: http://practice.bpbonline.com/. Use either driver.Url or driver.Navigate().GoToUrl() to navigate to the URL. 
 
-Identify the web table on the home page. Use XPath to locate the web table on the home page. 
+▪ Identify the web table on the home page. Use XPath to locate the web table on the home page. 
 
- 
+▪ Find all rows in the web table.
 
- 
-
-Find all rows in the web table: 
-
- 
-
-Create a CSV file to save product information: 
-
- 
-
- 
+▪ Create a CSV file to save product information.
 
 This optional step ensures that if a CSV file with the same name already exists in the specified location, it will be deleted before creating a new one. 
 This prevents appending data to an old file and ensures that each test run generates a fresh CSV file with only the current data. 
 
  
-Traverse through table rows to find the table columns: 
+Traverse through table rows to find the table columns.
 
 Loop through each row and then each column within the row. 
 
