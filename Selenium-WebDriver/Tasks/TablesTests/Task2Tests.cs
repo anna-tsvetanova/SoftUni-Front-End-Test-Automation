@@ -13,7 +13,7 @@ namespace Task2
         {
             driver = new ChromeDriver();    
 
-            //Add implicit Wait. Изчаква докато търси елементите
+            //Add implicit Wait. Waiting until element searching
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
             
             //Launch Chrome browser with given URL
