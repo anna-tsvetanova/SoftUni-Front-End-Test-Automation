@@ -87,9 +87,6 @@ namespace _02_SearchWithExplicitWait
         }
 
 
-
-
-
         [TearDown]
         public void TearDown() 
         {
