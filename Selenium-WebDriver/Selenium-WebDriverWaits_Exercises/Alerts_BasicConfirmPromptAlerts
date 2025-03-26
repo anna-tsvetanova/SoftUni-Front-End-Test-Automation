@@ -1,1 +1,106 @@
+using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
+namespace Alerts
+{
+    public class Tests
+    {
+        IWebDriver driver;
+        
+        [SetUp]
+        public void Setup()
+        {
+            driver = new ChromeDriver();
+            driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(10);
+            driver.Navigate().GoToUrl("https://the-internet.herokuapp.com/javascript_alerts"); 
+
+        }
+
+        [Test]
+        public void HandleBasicAlert()
+        {
+            //click on the button 1
+            driver.FindElement(By.XPath("//button[text()='Click for JS Alert']")).Click();
+
+            //switch to the alert --> reference "IAlert" and local variable "alert"
+            IAlert alert = driver.SwitchTo().Alert();
+
+            //verify the alert text
+            Assert.That(alert.Text, Is.EqualTo("I am a JS Alert"));
+            
+            //accept alert, pressing OK button
+            alert.Accept();
+
+            //verify the result message
+            var result = driver.FindElement(By.XPath("//p[@id='result']"));
+            Assert.That(result.Text, Is.EqualTo("You successfully clicked an alert")); 
+        }
+
+        [Test]
+        public void HandleConfirmAlert() 
+        {
+            //click on the button 2
+            driver.FindElement(By.CssSelector("[onclick='jsConfirm()']")).Click();
+
+            //switch to the alert --> reference "IAlert" and local variable "alert"
+            IAlert alert = driver.SwitchTo().Alert();
+
+            //verify the alert text
+            Assert.That(alert.Text, Is.EqualTo("I am a JS Confirm"));
+
+            //accept alert, pressing OK button
+            alert.Accept();
+
+            //verify the result message
+            var result = driver.FindElement(By.XPath("//p[@id='result']"));
+            Assert.That(result.Text, Is.EqualTo("You clicked: Ok"));
+
+            //click on the button 2 --> trigger again the alert
+            driver.FindElement(By.CssSelector("[onclick='jsConfirm()']")).Click();
+
+            //switch again to the alert
+            IAlert newAlert = driver.SwitchTo().Alert();
+
+            //verify the alert text
+            Assert.That(alert.Text, Is.EqualTo("I am a JS Confirm"));
+
+            //click on the "Cancel" button
+            newAlert.Dismiss();
+
+            //verify the result message
+            Assert.That(result.Text, Is.EqualTo("You clicked: Cancel"));
+        }
+
+        [Test]
+        public void HandlePromptAlert() 
+        {
+            //click on the button 3
+            driver.FindElement(By.CssSelector("[onclick= 'jsPrompt()']")).Click();
+
+            //switch to the alert --> reference "IAlert" and local variable "alert"
+            IAlert alert = driver.SwitchTo().Alert();
+
+            //verify the alert text
+            Assert.That(alert.Text, Is.EqualTo("I am a JS prompt"));
+
+            //typing text
+            string inputText = "Hello"; 
+            alert.SendKeys(inputText);
+
+            //accept alert, pressing OK button
+            alert.Accept();
+
+            //verify the result message
+            var resultElement = driver.FindElement(By.XPath("//p[@id='result']"));
+            Assert.That(resultElement.Text, Is.EqualTo($"You entered: {inputText}"));
+
+        }
+
+        [TearDown]
+        public void TearDown() 
+        {
+            driver.Quit();
+            driver.Dispose();
+        }
+    }
+}
