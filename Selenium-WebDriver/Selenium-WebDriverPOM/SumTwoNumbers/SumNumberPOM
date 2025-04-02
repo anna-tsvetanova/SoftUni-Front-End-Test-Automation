@@ -1,0 +1,58 @@
+using OpenQA.Selenium;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace _01_SumNumApp
+{
+    public class SumNumberPOM
+    {
+        private IWebDriver driverLivingInPOM;
+
+        //Constructor -> declaration and configuration 
+        public SumNumberPOM(IWebDriver driverComingFromTests)
+        {
+            this.driverLivingInPOM = driverComingFromTests;
+        }
+
+        const string PageUrl = "file:///C:/Users/annat/Downloads/Resources%20(1)/Sum-Num/sum-num.html"; 
+
+
+        //UI elements are mapped to C# properties
+        public IWebElement fieldNum1 => driverLivingInPOM.FindElement(By.CssSelector("[id='number1']"));
+
+        public IWebElement fieldNum2 => driverLivingInPOM.FindElement(By.CssSelector("[id='number2']"));
+
+        public IWebElement calcButton => driverLivingInPOM.FindElement(By.CssSelector("[id='calcButton']"));
+
+        public IWebElement resultElement => driverLivingInPOM.FindElement(By.XPath("//div[@id='result']"));
+
+        public IWebElement resetButton => driverLivingInPOM.FindElement(By.XPath("//input[@id='resetButton']")); 
+
+
+        public void OpenPage() 
+        {
+            driverLivingInPOM.Navigate().GoToUrl(PageUrl);
+        }
+
+        public string SumTwoNumbers(string number1, string number2) 
+        {
+            fieldNum1.SendKeys(number1);
+            fieldNum2.SendKeys(number2);
+
+            calcButton.Click();
+
+            string result = resultElement.Text;
+            return result;
+        }
+
+        public void ResetForm() 
+        {
+            resetButton.Click();
+        }
+
+    }
+}
+
